@@ -6,7 +6,7 @@ class AppTexts {
       'you can track your donor`s location and know the estimated time to arrive';
 
   static const String onBoardingSubtitle3 =
-      'you can post when you have Emergency situation and the donors can find you easily to donate ';
+      'you can post when you have Emergency situation and the donors can find you';
 
   static const String onBoardingTitle1 = "Easy Donor search";
 
