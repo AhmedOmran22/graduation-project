@@ -1,9 +1,16 @@
 class AppTexts {
-  static const String onBoarding1 =
-      "To be a responsible donor, you must get a check-up.";
+  static const String onBoardingSubtitle1 =
+      "Easy to find available donor  nearby you will verify when  they near your location";
 
-  static const String onBoarding2 =
-      'Your blood type should be compatible with the receiver’s type.';
+  static const String onBoardingSubtitle2 =
+      'you can track your donor`s location and know the estimated time to arrive';
 
-  static const String onBoarding3 = 'Donate your blood and save a life.';
+  static const String onBoardingSubtitle3 =
+      'you can post when you have Emergency situation and the donors can find you easily to donate ';
+
+  static const String onBoardingTitle1 = "Easy Donor search";
+
+  static const String onBoardingTitle2 = "Track your Donor ";
+
+  static const String onBoardingTitle3 = "Emergency Post";
 }

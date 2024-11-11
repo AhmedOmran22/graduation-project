@@ -10,6 +10,7 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.8
   dartz: ^0.10.1
+  dots_indicator: ^3.0.0
   flutter:
     sdk: flutter
   shared_preferences: ^2.3.2
@@ -23,11 +24,11 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-  - assets/images/
+    - assets/images/
   fonts:
-    - family: Montserrat
+    - family: Inter
       fonts:
-        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Inter-Regular.ttf
 
 flutter_assets:
   assets_path: assets/images/

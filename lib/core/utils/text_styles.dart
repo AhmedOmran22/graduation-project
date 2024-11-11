@@ -1,25 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/core/utils/app_colors.dart';
 
 class TextStyles {
-  static TextStyle montserratExtraBold23 = TextStyle(
-    fontFamily: 'Montserrat',
-    fontWeight: FontWeight.w900,
-    color: Colors.white,
+  static TextStyle interSemiBold24 = const TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+    color: Color(0xff000000),
     fontSize: 23,
-    shadows: [
-      Shadow(
-        offset: const Offset(1, 3), // position of shadow
-        blurRadius: 10, // blurriness of shadow
-        color: Colors.black.withOpacity(0.5) // color and opacity
-        ,
-      ),
-    ],
   );
-  static TextStyle montserratExtraBold20 = const TextStyle(
-    fontFamily: 'Montserrat',
-    fontWeight: FontWeight.w900,
-    color: AppColors.primaryColor,
-    fontSize: 22,
+  static TextStyle interRegular18 = const TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+    color: Color(0xff948D8D),
+    fontSize: 18,
   );
 }

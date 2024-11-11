@@ -5,26 +5,38 @@ class OnBoardingPageViewItem extends StatelessWidget {
   const OnBoardingPageViewItem({
     super.key,
     required this.image,
-    required this.text,
+    required this.title,
+    required this.subtitle,
   });
 
-  final String image, text;
+  final String image, title, subtitle;
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Image.asset(
           image,
-          width: 300,
-          height: 300,
         ),
+        const SizedBox(height: 32),
         Text(
-          text,
+          title,
           textAlign: TextAlign.center,
-          style: TextStyles.montserratExtraBold23,
+          style: TextStyles.interSemiBold24,
         ),
+        const SizedBox(height: 16),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4),
+          child: Text(
+            subtitle,
+            textAlign: TextAlign.center,
+            style: TextStyles.interRegular18,
+          ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.27,
+        )
       ],
     );
   }
