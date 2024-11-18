@@ -50,7 +50,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             text: 'Next',
             onPressed: () {
               if (pageController.page!.round() == 2) {
-                // navigate ton next screen
+                // navigate to next screen Ya Ahmed Mostafa
               }
               pageController.nextPage(
                 duration: const Duration(
