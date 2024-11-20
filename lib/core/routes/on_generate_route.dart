@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/core/routes/routes_name.dart';
 import 'package:graduation_project/features/on_boarding/presentation/views/on_boarding_view.dart';
+import 'package:graduation_project/features/on_boarding/presentation/views/register_or_login_view.dart';
 
 import '../../features/splash/presentation/views/splash_view.dart';
 
@@ -10,7 +11,9 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const SplashView());
     case RoutesName.onBoarding:
       return MaterialPageRoute(builder: (context) => const OnBoardingView());
-
+    case RoutesName.registerOrLogin:
+      return MaterialPageRoute(
+          builder: (context) => const RegisterOrLoginView());
     default:
       return MaterialPageRoute(
         builder: (context) => const Scaffold(
