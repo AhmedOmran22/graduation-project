@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/core/routes/routes_name.dart';
+import 'package:graduation_project/features/auth/presentation/views/login_view.dart';
+import 'package:graduation_project/features/auth/presentation/views/register_view.dart';
 import 'package:graduation_project/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:graduation_project/features/on_boarding/presentation/views/register_or_login_view.dart';
 
@@ -14,6 +16,10 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
     case RoutesName.registerOrLogin:
       return MaterialPageRoute(
           builder: (context) => const RegisterOrLoginView());
+    case RoutesName.login:
+      return MaterialPageRoute(builder: (context) => const LoginView());
+    case RoutesName.register:
+      return MaterialPageRoute(builder: (context) => const RegisterView());
     default:
       return MaterialPageRoute(
         builder: (context) => const Scaffold(
