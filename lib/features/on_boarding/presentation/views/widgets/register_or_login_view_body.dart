@@ -34,21 +34,21 @@ class RegisterOrLoginViewBody extends StatelessWidget {
           const SizedBox(height: 16),
           CustomButton(
             onPressed: () {
-              Navigator.pushNamed(context, RoutesName.login);
+              Navigator.pushReplacementNamed(context, RoutesName.login);
             },
             text: 'Login',
           ),
           const SizedBox(height: 16),
           CustomButton(
             onPressed: () {
-              Navigator.pushNamed(context, RoutesName.register);
+              Navigator.pushReplacementNamed(context, RoutesName.register);
             },
             text: 'Register',
             textColor: AppColors.primaryColor,
             backgroundColor: Colors.white,
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.15,
+            height: MediaQuery.of(context).size.height * 0.12,
           )
         ],
       ),
