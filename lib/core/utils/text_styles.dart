@@ -13,4 +13,5 @@ class TextStyles {
     color: Color(0xff948D8D),
     fontSize: 18,
   );
+
 }

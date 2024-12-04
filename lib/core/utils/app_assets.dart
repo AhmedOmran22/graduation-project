@@ -6,6 +6,8 @@ class AppAssets {
 
   static const String imagesFacebookLogo = "assets/images/facebook-logo.png";
 
+  static const String imagesForgetPassword = "assets/images/forget_password.png";
+
   static const String imagesGoogleLogo = "assets/images/google-logo.png";
 
   static const String imagesOnBoarding1 = "assets/images/on_boarding_1.png";
@@ -17,5 +19,7 @@ class AppAssets {
   static const String imagesRegisterOrLogin = "assets/images/register_or_login.png";
 
   static const String imagesSplash = "assets/images/splash.png";
+
+  static const String imagesVerfiyYourCode = "assets/images/verfiy_your_code.png";
 }
 

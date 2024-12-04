@@ -77,14 +77,19 @@ class LoginView extends StatelessWidget {
                   hinttext: 'password',
                   onchange: (data) {},
                 ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 0),
-                      child: Text('Forget Password?'),
-                    )
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, RoutesName.foregetPassword);
+                  },
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 0),
+                        child: Text('Forget Password?'),
+                      )
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
