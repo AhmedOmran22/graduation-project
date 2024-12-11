@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_text_field.dart';
 
 class LoginForm extends StatefulWidget {
@@ -24,6 +25,22 @@ class _LoginFormState extends State<LoginForm> {
         hinttext: 'password',
         onSaved: (data) {},
       ),
+      const SizedBox(
+        height: 20,
+      ),
+      const Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Text('Forget Password?'),
+          )
+        ],
+      ),
+      const SizedBox(
+        height: 20,
+      ),
+      CustomButton(onPressed: () {}, text: 'Login'),
     ]);
   }
 }

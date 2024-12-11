@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/core/routes/routes_name.dart';
 import 'package:graduation_project/features/auth/presentation/views/forget_password_view.dart';
-import 'package:graduation_project/features/auth/presentation/views/sign_in_view.dart';
-import 'package:graduation_project/features/auth/presentation/views/sign_up_view.dart';
+import 'package:graduation_project/features/auth/presentation/views/signin_view.dart';
+import 'package:graduation_project/features/auth/presentation/views/signup_view.dart';
 import 'package:graduation_project/features/auth/presentation/views/verfiy_your_code_view.dart';
 import 'package:graduation_project/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:graduation_project/features/on_boarding/presentation/views/register_or_login_view.dart';

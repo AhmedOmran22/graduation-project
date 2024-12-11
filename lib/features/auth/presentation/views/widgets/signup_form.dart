@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_text_field.dart';
 import 'Drop_down_Button_Form_Field.dart';
 
@@ -58,6 +59,8 @@ class _SignupFormState extends State<SignupForm> {
           height: 20,
         ),
         const Dropdownbuttonformfield(),
+        const SizedBox(height: 20),
+        CustomButton(onPressed: () {}, text: 'sign up'),
       ],
     );
   }

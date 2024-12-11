@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/core/routes/routes_name.dart';
 import 'package:graduation_project/features/auth/presentation/views/widgets/registration_form.dart';
-
-import '../../../../../core/widgets/custom_button.dart';
 import 'custom_text_header.dart';
 import 'login_form.dart';
 
@@ -15,6 +13,7 @@ class SigninViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(children: [
+        SizedBox(height: MediaQuery.of(context).size.height * 0.1 ),
         const CustomHeader(
           title: 'BLOOD BANK',
           subtitle: 'Welcome Back!',
@@ -23,19 +22,6 @@ class SigninViewBody extends StatelessWidget {
           height: 20,
         ),
         const LoginForm(),
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0),
-              child: Text('Forget Password?'),
-            )
-          ],
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        CustomButton(onPressed: () {}, text: 'Login'),
         const SizedBox(
           height: 30,
         ),

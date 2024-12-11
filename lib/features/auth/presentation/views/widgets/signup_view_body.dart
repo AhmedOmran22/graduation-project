@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/features/auth/presentation/views/widgets/signup_form.dart';
 
-import '../../../../../core/routes/routes_name.dart';
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
-import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/square_image_logo.dart';
 import 'custom_text_header.dart';
-import 'registration_form.dart';
 
 class SignupViewBody extends StatelessWidget {
   const SignupViewBody({
@@ -25,8 +22,6 @@ class SignupViewBody extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           const SignupForm(),
-          const SizedBox(height: 20),
-          CustomButton(onPressed: () {}, text: 'sign up'),
           const SizedBox(height: 30),
           const Row(
             children: [
@@ -66,7 +61,7 @@ class SignupViewBody extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushReplacementNamed(context, RoutesName.login);
+                  Navigator.pop(context);
                 },
                 child: const Text(
                   'Sigin Now',
@@ -75,13 +70,7 @@ class SignupViewBody extends StatelessWidget {
               )
             ],
           ),
-          RegistrationForm(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            text1: 'AlradyhaveAcount?',
-            text2: 'signin',
-          )
+          const SizedBox(height: 20),
         ],
       ),
     );

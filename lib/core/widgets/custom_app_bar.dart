@@ -6,8 +6,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      padding: const EdgeInsets.all(16),
+    return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
@@ -23,19 +22,22 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           bottomRight: Radius.circular(30),
         ),
       ),
-      child: Center(
-        child: Text(
-          title,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+      child: Padding(
+        padding: const EdgeInsets.only(top: 24),
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(
+              color: Color.fromARGB(255, 238, 235, 235),
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),
     );
   }
-  
-   @override
+
+  @override
   Size get preferredSize => const Size.fromHeight(60);
 }
