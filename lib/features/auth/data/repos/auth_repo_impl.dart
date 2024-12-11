@@ -46,7 +46,8 @@ class AuthRepoImpl extends AuthRepo {
         birthDate: birthDate,
         bloodType: bloodType,
       );
-      addUserData(user: userModel);
+      await addUserData(user: userModel);
+      await saveUserData(user: userModel);
       return Right(userModel);
     } on CustomException catch (e) {
       await deleteUser(user);
@@ -56,8 +57,21 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserModel>> signinWithEmailAndPassword(
-      String email, String password) {
-    throw UnimplementedError();
+    String email,
+    String password,
+  ) async {
+    try {
+      var user = await firebaseAuthService.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      UserModel currentUser = await getUserData(uid: user.uid);
+      saveUserData(user: currentUser);
+      return Right(currentUser);
+    } on CustomException catch (e) {
+      return Left(FirebaseAuthFailure(errMessage: e.message));
+    }
   }
 
   @override
@@ -93,5 +107,6 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future<void> signOut() async {
     await firebaseAuthService.signOut();
+    // await Prefs.removeData(key: kUserData);
   }
 }

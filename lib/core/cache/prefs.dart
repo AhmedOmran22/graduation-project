@@ -22,4 +22,8 @@ class Prefs {
   static getString(String key) {
     return _instance.getString(key) ?? "";
   }
+
+  static Future<bool> removeData({required String key}) async {
+    return await _instance.remove(key);
+  }
 }

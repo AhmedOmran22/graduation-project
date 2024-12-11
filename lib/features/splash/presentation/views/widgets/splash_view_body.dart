@@ -18,12 +18,17 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset(
-        AppAssets.imagesSplash,
-        width: 350,
-        height: 350,
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+          child: Image.asset(
+            AppAssets.imagesSplash,
+            width: 350,
+            height: 350,
+          ),
+        ),
+      ],
     );
   }
 
