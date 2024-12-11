@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/core/routes/routes_name.dart';
 import 'package:graduation_project/core/utils/app_assets.dart';
 import 'package:graduation_project/core/utils/app_colors.dart';
 import 'package:graduation_project/core/widgets/square_image_logo.dart';
 
 class RegistrationForm extends StatelessWidget {
-  const RegistrationForm({super.key, required this.text1, required this.text2});
+  const RegistrationForm(
+      {super.key,
+      required this.text1,
+      required this.text2,
+      required this.onTap});
   final String text1;
   final String text2;
-
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -58,9 +61,7 @@ class RegistrationForm extends StatelessWidget {
               width: 5,
             ),
             GestureDetector(
-              onTap: () {
-                Navigator.pushReplacementNamed(context, RoutesName.login);
-              },
+              onTap: onTap,
               child: Text(
                 text2,
                 style: const TextStyle(color: AppColors.primaryColor),

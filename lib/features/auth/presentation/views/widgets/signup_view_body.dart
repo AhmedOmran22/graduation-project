@@ -75,7 +75,10 @@ class SignupViewBody extends StatelessWidget {
               )
             ],
           ),
-          const RegistrationForm(
+          RegistrationForm(
+            onTap: () {
+              Navigator.pop(context);
+            },
             text1: 'AlradyhaveAcount?',
             text2: 'signin',
           )
