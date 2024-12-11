@@ -4,6 +4,8 @@ class AppAssets {
   
   static const String imagesAppleLogo = "assets/images/apple-logo.png";
 
+  static const String imagesDonor = "assets/images/donor.png";
+
   static const String imagesFacebookLogo = "assets/images/facebook-logo.png";
 
   static const String imagesForgetPassword = "assets/images/forget_password.png";
