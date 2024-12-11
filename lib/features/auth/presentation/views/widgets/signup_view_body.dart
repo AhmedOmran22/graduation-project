@@ -26,16 +26,20 @@ class SignupViewBody extends StatelessWidget {
             ),
           );
         } else if (state is SignupCubitError) {
+          Navigator.pop(context);
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(state.errorMessage),
             ),
           );
         } else if (state is SignupCubitLoading) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Loading...'),
-            ),
+          showDialog(
+            context: context,
+            builder: (context) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            },
           );
         }
       },

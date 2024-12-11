@@ -12,7 +12,7 @@ class Prefs {
   }
 
   static getBool(String key) {
-    return _instance.getBool(key) ?? false;
+    return _instance.get(key);
   }
 
   static setString(String key, String value) async {
