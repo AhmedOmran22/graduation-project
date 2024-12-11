@@ -12,13 +12,24 @@ class SignupForm extends StatefulWidget {
 }
 
 class _SignupFormState extends State<SignupForm> {
+  late TextEditingController nameController;
+  late TextEditingController emailController;
+  late TextEditingController passwordController;
+  late TextEditingController locationController;
+  late TextEditingController phoneNumberController;
+  late TextEditingController brithdataController;
+  late TextEditingController bloodTypeController;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         CustomTextField(
           hinttext: 'name',
-          onSaved: (data) {},
+          onSaved: (data) 
+          {
+              
+          },
         ),
         const SizedBox(
           height: 20,
