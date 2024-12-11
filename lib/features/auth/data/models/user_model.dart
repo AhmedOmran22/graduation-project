@@ -25,4 +25,14 @@ class UserModel {
         birthDate: json['birthDate'] as String,
         bloodType: json['bloodType'] as String,
       );
+
+  toMap() => {
+        'uid': uid,
+        'email': email,
+        'name': name,
+        'location': location,
+        'phoneNumber': phoneNumber,
+        'birthDate': birthDate,
+        'bloodType': bloodType,
+      };
 }

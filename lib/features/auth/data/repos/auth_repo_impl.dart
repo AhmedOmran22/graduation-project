@@ -1,21 +1,26 @@
+import 'dart:convert';
+
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:graduation_project/core/constants/backend_endpoints.dart';
 import 'package:graduation_project/core/errors/exception.dart';
 import 'package:graduation_project/core/errors/failure.dart';
+import 'package:graduation_project/core/services/data_base_service.dart';
 import 'package:graduation_project/core/services/firebase_auth_service.dart';
 import 'package:graduation_project/features/auth/data/models/user_model.dart';
 import 'package:graduation_project/features/auth/data/repos/auth_repo.dart';
 
+import '../../../../core/cache/prefs.dart';
+import '../../../../core/constants/constatnts.dart';
+
 class AuthRepoImpl extends AuthRepo {
   final FirebaseAuthService firebaseAuthService;
+  final DatabaseService databaseService;
 
-  AuthRepoImpl({required this.firebaseAuthService});
-  @override
-  Future addUserData({required UserModel user}) {
-    // TODO: implement addUserData
-    throw UnimplementedError();
-  }
-
+  AuthRepoImpl({
+    required this.firebaseAuthService,
+    required this.databaseService,
+  });
   @override
   Future<Either<Failure, UserModel>> createUserWithEmailAndPassword({
     required String userName,
@@ -50,10 +55,32 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  @override
   Future<Either<Failure, UserModel>> signinWithEmailAndPassword(
       String email, String password) {
     throw UnimplementedError();
+  }
+
+  @override
+  Future addUserData({required UserModel user}) async {
+    await databaseService.addData(
+      path: BackendEndpoints.kUsers,
+      data: user.toMap(),
+      documentId: user.uid,
+    );
+  }
+
+  @override
+  Future saveUserData({required UserModel user}) async {
+    var jsonData = jsonEncode(user.toMap());
+    await Prefs.setString(kUserData, jsonData);
+  }
+
+  Future<UserModel> getUserData({required String uid}) async {
+    var userData = await databaseService.getData(
+      path: BackendEndpoints.kUsers,
+      docuementId: uid,
+    );
+    return UserModel.fromJson(userData);
   }
 
   @override

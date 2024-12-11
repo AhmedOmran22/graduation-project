@@ -18,7 +18,7 @@ abstract class AuthRepo {
       String email, String password);
   Future addUserData({required UserModel user});
   // Future saveUserData({required UserModel user});
-  // Future<UserModel> getUserData({required String uid});
+  Future saveUserData({required UserModel user});
   Future<void> deleteUser(User? user);
   Future<void> signOut();
 }
