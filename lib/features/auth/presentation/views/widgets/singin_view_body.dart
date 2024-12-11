@@ -20,6 +20,7 @@ class SigninViewBody extends StatelessWidget {
         if (state is SigninCubitSuccess) {
           Navigator.of(context).pushReplacementNamed(RoutesName.home);
         } else if (state is SigninCubitError) {
+          Navigator.pop(context);
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(state.errorMessage),
