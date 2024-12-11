@@ -6,8 +6,7 @@ class SignupCubitInitial extends SignupCubitState {}
 
 class SignupCubitLoading extends SignupCubitState {}
 
-class SignupCubitSuccess extends SignupCubitState 
-{
+class SignupCubitSuccess extends SignupCubitState {
   UserModel userModel;
   SignupCubitSuccess({required this.userModel});
 }

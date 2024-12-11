@@ -20,11 +20,7 @@ class SignupViewBody extends StatelessWidget {
     return BlocListener<SignupCubit, SignupCubitState>(
       listener: (context, state) {
         if (state is SignupCubitSuccess) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Account created successfully'),
-            ),
-          );
+          Navigator.of(context).pushReplacementNamed(RoutesName.home);
         } else if (state is SignupCubitError) {
           Navigator.pop(context);
           ScaffoldMessenger.of(context).showSnackBar(
@@ -37,7 +33,9 @@ class SignupViewBody extends StatelessWidget {
             context: context,
             builder: (context) {
               return const Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: Colors.white,
+                ),
               );
             },
           );
@@ -91,7 +89,7 @@ class SignupViewBody extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacementNamed(context, RoutesName.login);
+                    Navigator.pop(context);
                   },
                   child: const Text(
                     'Sigin Now',

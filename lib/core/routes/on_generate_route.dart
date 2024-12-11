@@ -7,6 +7,7 @@ import 'package:graduation_project/features/auth/presentation/views/verfiy_your_
 import 'package:graduation_project/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:graduation_project/features/on_boarding/presentation/views/register_or_login_view.dart';
 
+import '../../features/home/presentation/views/home_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 
 Route<dynamic> onGenerateRoutes(RouteSettings settings) {
@@ -28,6 +29,8 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
     case RoutesName.verfiyYourCode:
       return MaterialPageRoute(
           builder: (context) => const VerfiyYourCodeView());
+    case RoutesName.home:
+      return MaterialPageRoute(builder: (context) => const HomeView());
     default:
       return MaterialPageRoute(
         builder: (context) => const Scaffold(

@@ -3,6 +3,7 @@ import 'package:graduation_project/features/auth/data/repos/auth_repo.dart';
 
 import 'signup_state.dart';
 
+
 class SignupCubit extends Cubit<SignupCubitState> {
   SignupCubit(this.authRepo) : super(SignupCubitInitial());
 

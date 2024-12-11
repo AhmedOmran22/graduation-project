@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/core/utils/app_assets.dart';
-import 'package:graduation_project/core/utils/app_colors.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 
 import '../../../../../core/routes/routes_name.dart';
@@ -39,14 +38,14 @@ class RegisterOrLoginViewBody extends StatelessWidget {
             text: 'Login',
           ),
           const SizedBox(height: 16),
-          CustomButton(
-            onPressed: () {
-              Navigator.pushReplacementNamed(context, RoutesName.register);
-            },
-            text: 'Register',
-            textColor: AppColors.primaryColor,
-            backgroundColor: Colors.white,
-          ),
+          // CustomButton(
+          //   onPressed: () {
+          //     Navigator.pushReplacementNamed(context, RoutesName.register);
+          //   },
+          //   text: 'Register',
+          //   textColor: AppColors.primaryColor,
+          //   backgroundColor: Colors.white,
+          // ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.12,
           )
