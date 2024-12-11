@@ -17,23 +17,26 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 50,
-      child: TextButton(
-        style: TextButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              12,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: SizedBox(
+        width: double.infinity,
+        height: 50,
+        child: TextButton(
+          style: TextButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+                12,
+              ),
             ),
+            backgroundColor: backgroundColor,
           ),
-          backgroundColor: backgroundColor,
-        ),
-        onPressed: onPressed,
-        child: Text(
-          text,
-          style: TextStyles.interSemiBold24.copyWith(
-            color: textColor,
+          onPressed: onPressed,
+          child: Text(
+            text,
+            style: TextStyles.interSemiBold24.copyWith(
+              color: textColor,
+            ),
           ),
         ),
       ),

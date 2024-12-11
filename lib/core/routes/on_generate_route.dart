@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/core/routes/routes_name.dart';
 import 'package:graduation_project/features/auth/presentation/views/forget_password_view.dart';
+import 'package:graduation_project/features/auth/presentation/views/sign_in_view.dart';
+import 'package:graduation_project/features/auth/presentation/views/sign_up_view.dart';
 import 'package:graduation_project/features/auth/presentation/views/verfiy_your_code_view.dart';
 import 'package:graduation_project/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:graduation_project/features/on_boarding/presentation/views/register_or_login_view.dart';
 
-import '../../features/auth/presentation/views/login_view.dart';
-import '../../features/auth/presentation/views/register_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 
 Route<dynamic> onGenerateRoutes(RouteSettings settings) {
@@ -19,9 +19,9 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(
           builder: (context) => const RegisterOrLoginView());
     case RoutesName.login:
-      return MaterialPageRoute(builder: (context) => const LoginView());
+      return MaterialPageRoute(builder: (context) => const SignInView());
     case RoutesName.register:
-      return MaterialPageRoute(builder: (context) => const RegisterView());
+      return MaterialPageRoute(builder: (context) => const SignUpView());
     case RoutesName.foregetPassword:
       return MaterialPageRoute(
           builder: (context) => const ForgetPasswordView());
