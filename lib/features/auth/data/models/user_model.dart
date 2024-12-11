@@ -3,7 +3,7 @@ class UserModel {
   final String email;
   final String name;
   final String location;
-  final num phoneNumber;
+  final String phoneNumber;
   final String birthDate;
   final String bloodType;
 
@@ -21,7 +21,7 @@ class UserModel {
         email: json['email'] as String,
         name: json['name'] as String,
         location: json['location'] as String,
-        phoneNumber: json['phoneNumber'] as num,
+        phoneNumber: json['phoneNumber'] ,
         birthDate: json['birthDate'] as String,
         bloodType: json['bloodType'] as String,
       );

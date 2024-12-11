@@ -26,7 +26,7 @@ class AuthRepoImpl extends AuthRepo {
     required String userName,
     required String email,
     required String password,
-    required num phoneNumber,
+    required String phoneNumber,
     required String location,
     required String birthDate,
     required String bloodType,

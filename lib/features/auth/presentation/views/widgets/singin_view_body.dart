@@ -13,7 +13,7 @@ class SigninViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(children: [
-        SizedBox(height: MediaQuery.of(context).size.height * 0.1 ),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.1),
         const CustomHeader(
           title: 'BLOOD BANK',
           subtitle: 'Welcome Back!',
