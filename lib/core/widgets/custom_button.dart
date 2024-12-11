@@ -9,12 +9,13 @@ class CustomButton extends StatelessWidget {
     required this.onPressed,
     required this.text,
     this.backgroundColor = AppColors.primaryColor,
-    this.textColor = Colors.white,
+    this.textColor = Colors.white, this.loadingWidget,
   });
   final VoidCallback onPressed;
   final String text;
   final Color? backgroundColor;
   final Color? textColor;
+  final Widget? loadingWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -33,12 +34,13 @@ class CustomButton extends StatelessWidget {
             backgroundColor: backgroundColor,
           ),
           onPressed: onPressed,
-          child: Text(
-            text,
-            style: TextStyles.interSemiBold24.copyWith(
-              color: textColor,
-            ),
-          ),
+          child: loadingWidget ??
+              Text(
+                text,
+                style: TextStyles.interSemiBold24.copyWith(
+                  color: textColor,
+                ),
+              ),
         ),
       ),
     );

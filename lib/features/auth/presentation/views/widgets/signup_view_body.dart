@@ -31,6 +31,12 @@ class SignupViewBody extends StatelessWidget {
               content: Text(state.errorMessage),
             ),
           );
+        } else if (state is SignupCubitLoading) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Loading...'),
+            ),
+          );
         }
       },
       child: SingleChildScrollView(
