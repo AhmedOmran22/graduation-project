@@ -18,6 +18,7 @@ class CustomOtpField extends StatelessWidget {
           }
           return null;
         },
+        
         animationCurve: Curves.linear,
         animationType: AnimationType.scale,
         mainAxisAlignment: MainAxisAlignment.spaceAround,

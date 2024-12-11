@@ -47,6 +47,7 @@ class ForgetPasswordViewBody extends StatelessWidget {
             ),
             CustomButton(
               onPressed: () {
+                FocusManager.instance.primaryFocus?.unfocus();
                 Navigator.pushNamed(context, RoutesName.verfiyYourCode);
               },
               text: AppTexts.send,
