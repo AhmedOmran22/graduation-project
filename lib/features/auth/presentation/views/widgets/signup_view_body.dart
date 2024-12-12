@@ -20,7 +20,8 @@ class SignupViewBody extends StatelessWidget {
     return BlocListener<SignupCubit, SignupCubitState>(
       listener: (context, state) {
         if (state is SignupCubitSuccess) {
-          Navigator.of(context).pushReplacementNamed(RoutesName.home);
+          Navigator.of(context)
+              .pushNamedAndRemoveUntil(RoutesName.home, (route) => false);
         } else if (state is SignupCubitError) {
           Navigator.pop(context);
           ScaffoldMessenger.of(context).showSnackBar(
