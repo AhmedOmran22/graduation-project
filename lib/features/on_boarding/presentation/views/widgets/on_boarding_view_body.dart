@@ -1,7 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:graduation_project/core/cache/prefs.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 import 'package:graduation_project/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 
+import '../../../../../core/constants/constatnts.dart';
 import '../../../../../core/routes/routes_name.dart';
 import 'custom_dots_indicators.dart';
 
@@ -51,6 +55,8 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             text: 'Next',
             onPressed: () {
               if (pageController.page!.round() == 2) {
+                Prefs.setBool(kIsOnBoardingViewed, true);
+                log("seen is ${Prefs.getBool(kIsOnBoardingViewed).toString()}");
                 Navigator.pushReplacementNamed(
                   context,
                   RoutesName.registerOrLogin,

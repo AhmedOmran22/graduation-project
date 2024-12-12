@@ -40,27 +40,29 @@ class SigninViewBody extends StatelessWidget {
         }
       },
       child: SingleChildScrollView(
-        child: Column(children: [
-          SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-          const CustomHeader(
-            title: 'BLOOD BANK',
-            subtitle: 'Welcome Back!',
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const SigninForm(),
-          const SizedBox(
-            height: 30,
-          ),
-          RegistrationForm(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutesName.register);
-            },
-            text1: 'NotAmember!',
-            text2: 'signup',
-          )
-        ]),
+        child: Column(
+          children: [
+            SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+            const CustomHeader(
+              title: 'BLOOD BANK',
+              subtitle: 'Welcome Back!',
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const SigninForm(),
+            const SizedBox(
+              height: 30,
+            ),
+            RegistrationForm(
+              onTap: () {
+                Navigator.of(context).pushNamed(RoutesName.register);
+              },
+              text1: 'NotAmember!',
+              text2: 'signup',
+            )
+          ],
+        ),
       ),
     );
   }

@@ -1,6 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:graduation_project/core/routes/routes_name.dart';
 import 'package:graduation_project/core/utils/app_assets.dart';
+
+import '../../../../../core/cache/prefs.dart';
+import '../../../../../core/constants/constatnts.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -34,7 +39,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   excuteNavigation() async {
     await Future.delayed(const Duration(seconds: 1));
-    if (!mounted) return;
-    Navigator.pushReplacementNamed(context, RoutesName.onBoarding);
+    if (Prefs.getBool(kIsOnBoardingViewed) == true) {
+      log("seen is ${Prefs.getBool(kIsOnBoardingViewed).toString()}");
+      Navigator.pushReplacementNamed(context, RoutesName.login);
+    } else {
+      Navigator.pushReplacementNamed(context, RoutesName.onBoarding);
+    }
   }
 }
